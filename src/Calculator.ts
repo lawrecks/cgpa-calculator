@@ -14,7 +14,7 @@ class Calculator {
     });
   }
 
-  getGradePoint = (grade: string, unit: number) => {
+  getGradePoint (grade: string, unit: number) {
     let point: number;
     switch (grade) {
       case 'A':
@@ -37,9 +37,9 @@ class Calculator {
         break;
     }
     return point * unit;
-  };
+  }
 
-  calculateCGPA = () => {
+  calculateCGPA () {
     const totalUnits = this.units.reduce(
       (acc: number, currentVal: number) => acc + currentVal,
     );
@@ -48,9 +48,9 @@ class Calculator {
     );
     const cgpa = totalGradePoints / totalUnits;
     console.log(`Your CGPA is ${cgpa}`);
-  };
+  }
 
-  rePromptOrCalculate = () => {
+  rePromptOrCalculate () {
     this.readLineInterface.question(
       'Would you like to enter another course? (Y/N): ',
       (answer) => {
