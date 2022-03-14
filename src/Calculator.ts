@@ -66,7 +66,7 @@ class Calculator {
         }
       },
     );
-  };
+  }
 
   askGrade(unit: number, courseName: string) {
     const validGrades = ['A', 'B', 'C', 'D', 'E', 'F'];
